@@ -4,7 +4,11 @@ Executes the `npm install` command with leveraging the wercker cache mechanism t
 
 ## Options
 
-This steps has no options.
+### options
+- type: string
+- optional: true
+- description: Passed through to npm install
+- example: `options: -g bower`
 
 ## Example
 
