@@ -1,7 +1,7 @@
 #!/bin/bash
 
 main() {
-  if [ "$WERCKER_NPM_INSTALL_USE_CACHE" == "true" ]; then
+  if [ "$WERCKER_NPM_INSTALL_CWD_USE_CACHE" == "true" ]; then
     info "Using wercker cache"
     setup_cache
   fi
@@ -35,9 +35,9 @@ npm_install() {
   local retries=3;
   for try in $(seq "$retries"); do
     info "Starting npm install, try: $try"
-    npm install $WERCKER_NPM_INSTALL_OPTIONS && return;
+    cd $WERCKER_NPM_INSTALL_CWD_CWD && npm install $WERCKER_NPM_INSTALL_CWD_OPTIONS && return;
 
-    if [ "$WERCKER_NPM_INSTALL_CLEAR_CACHE_ON_FAILED" == "true" ]; then
+    if [ "$WERCKER_NPM_INSTALL_CWD_CLEAR_CACHE_ON_FAILED" == "true" ]; then
       clear_cache
     fi
   done

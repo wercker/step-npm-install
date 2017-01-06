@@ -1,4 +1,4 @@
-# npm-install step
+# npm-install-cwd step
 
 Executes the `npm install` command with leveraging the wercker cache mechanism
 to improve installation time (optional).
@@ -12,13 +12,14 @@ optionally the cache will be cleared in between.
   cache before trying again.
 - `use-cache` (optional, default: `true`) Use the npm cache.
 - `options` (optional) Allow for passing arbitrary arguments to npm.
+- `cwd` (optional, default: `./`) The directory to run `npm-install` in
 
 ## Example
 
 ```yaml
 build:
     steps:
-        - npm-install
+        - abuecker/npm-install-cwd
 ```
 
 # License
@@ -27,26 +28,6 @@ The MIT License (MIT)
 
 # Changelog
 
-## 1.1.4
+## 0.0.1
 
-- Ensure cache get's stored
-
-## 1.1.1
-
-- Add debug messages
-
-## 1.1.0
-
-- Add `clear-cache-on-failed`, `use-cache` options.
-
-## 1.0.0
-
-- Add retry on error
-
-## 0.9.3
-
-- Fix wrong directory cache created
-
-## 0.9.2
-
-- Initial release
+- Forked from 1.1.4 and added CWD support
