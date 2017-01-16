@@ -13,3 +13,6 @@ properties:
   options:
     type: string
     required: false
+  packages:
+    type: string
+    required: false

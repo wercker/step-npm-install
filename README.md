@@ -12,6 +12,7 @@ optionally the cache will be cleared in between.
   cache before trying again.
 - `use-cache` (optional, default: `true`) Use the npm cache.
 - `options` (optional) Allow for passing arbitrary arguments to npm.
+- `packages` (optional) A list of the packages to install
 
 ## Example
 
