@@ -66,3 +66,7 @@ The MIT License (MIT)
 ## 0.9.2
 
 - Initial release
+
+# Credit
+
+This step is based in the official [`wercker/npm-install`](https://github.com/wercker/step-npm-install) step as a starting point.
