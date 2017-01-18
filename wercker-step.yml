@@ -1,5 +1,5 @@
 name: npm-install
-version: 1.2.0
+version: 1.2.1
 description: npm-install step
 properties:
   clear-cache-on-failed:
