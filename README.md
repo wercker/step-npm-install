@@ -19,17 +19,17 @@ optionally the cache will be cleared in between.
 The following example installs the packages listed in the `package.json` file:
 ```yaml
 build:
-  steps:
-    - npm-install
+    steps:
+        - npm-install
 ```
 
 The following example globally installs the `apidoc` and the `mocha` packages:
 ```yaml
 build:
-  steps:
-    - npm-install:
-        options: --global
-        packages: apidoc mocha
+    steps:
+      - npm-install:
+          options: --global
+          packages: apidoc mocha
 ```
 
 # License
