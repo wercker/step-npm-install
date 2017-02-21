@@ -1,7 +1,10 @@
 name: npm-install
-version: 1.1.4
+version: 1.1.5
 description: npm-install step
 properties:
+  cwd:
+    type: string
+    require: false
   clear-cache-on-failed:
     type: bool
     default: true
