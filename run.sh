@@ -32,6 +32,14 @@ clear_cache() {
 }
 
 npm_install() {
+  source_dir="$WERCKER_ROOT/$WERCKER_NPM_INSTALL_CWD"
+  if cd "$source_dir";
+  then
+      debug "changed directory $source_dir"
+  else
+      fail "unable to change directory to $source_dir"
+  fi
+
   local retries=3;
   for try in $(seq "$retries"); do
     info "Starting npm install, try: $try"

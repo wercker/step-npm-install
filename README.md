@@ -8,6 +8,7 @@ optionally the cache will be cleared in between.
 
 ## Options
 
+- `cwd` (optional, default: `$WERCKER_ROOT`) Location of package.json
 - `clear-cache-on-failed` (optional, default: `true`) If npm fails, clear the
   cache before trying again.
 - `use-cache` (optional, default: `true`) Use the npm cache.
@@ -26,6 +27,10 @@ build:
 The MIT License (MIT)
 
 # Changelog
+
+## 1.1.5
+
+- Added `cwd` (current working directory)
 
 ## 1.1.4
 
